@@ -15,6 +15,8 @@ const Keyboard = ({ children }) => {
         margin: "10px",
         padding: "10px",
         backgroundColor: "#2b2b2b",
+        borderBottomLeftRadius: 5,
+        borderBottomRightRadius: 5
       }}
     >
       <Table sx={{ width: "auto" }}>
