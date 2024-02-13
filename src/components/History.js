@@ -9,7 +9,15 @@ const style = {
     width: '100%',
     overflow: 'auto',
     p: '0',
-    color: "#d5d9da"
+    color: "#d5d9da",
+    backgroundColor: "#4e4e50",
+    minHeight: "100px",
+    borderBottom: 1,
+    borderBottomColor: "#171718",
+    display: "flex",
+    flexDirection: "column-reverse",
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5
   };
 
 const History = ({history}) => {
@@ -17,13 +25,14 @@ const History = ({history}) => {
     <Box
       sx={{
         display: "flex",
-        flexDirection: "column-reverse",
+        flexDirection: "column",
         alignContent: "center",
-        width: "380px",
-        height: "150px",
-        backgroundColor: "#4e4e50",
-        borderBottom: 1,
-        borderBottomColor: "#171718"
+        width: "360px",
+        maxHeight: "150px",
+        minHeight: "100px",
+        paddingLeft: "10px",
+        paddingRight: "10px",
+        backgroundColor: "#2b2b2b",
       }}
     >
         <List sx={style}>
