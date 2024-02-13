@@ -1,6 +1,15 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
+const style = {
+  backgroundColor: "#4e4e50",
+  color: "#ffffff", 
+  width: "100%",
+  padding: "5px",
+  borderBottomLeftRadius: 5,
+  borderBottomRightRadius: 5
+};
+
 const Display = ({total}) => {
     return(
     <Box
@@ -9,12 +18,13 @@ const Display = ({total}) => {
         alignContent: "center",
         width: "360px",
         height: "50px",
-        padding: "10px",
+        paddingLeft: "10px",
+        paddingRight: "10px",
         marginBottom: "-10px",
-        backgroundColor: "#404040",
+        backgroundColor: "#2b2b2b",
       }}
     >
-        <Typography variant="h5" fontWeight={"bold"} sx={{color: "#ffff"}}>{total}</Typography>
+          <Typography variant="h5" fontWeight={"bold"} sx={style}>{total}</Typography>
     </Box>
     );
 };
