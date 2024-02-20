@@ -1,7 +1,10 @@
 import React from "react";
 import { Button } from "@mui/material";
 
-const CalcButton = ({ value, width, height, rowSpan = 1, backgroundColor }) => {
+const CalcButton = ({ value, width, height, rowSpan = 1, backgroundColor, changeDisplay }) => {
+  const buttonPresed = ()=>{
+    changeDisplay(value.props.children);
+  }
   return (
     <Button
       variant="contained"
@@ -15,6 +18,7 @@ const CalcButton = ({ value, width, height, rowSpan = 1, backgroundColor }) => {
         borderRadius: "5px",
         backgroundColor: `${backgroundColor}`,
       }}
+      onClick={buttonPresed}
     >
       {value}
     </Button>

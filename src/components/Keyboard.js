@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Table, TableCell, TableRow, Typography } from "@mui/material";
 import CalcButton from "./CalcButton";
 
-const Keyboard = ({ children }) => {
+const Keyboard = ({ changeDisplay }) => {
   const width = "70px";
   const height = "50px";
   const plusHeight = "100px";
@@ -31,6 +31,7 @@ const Keyboard = ({ children }) => {
                   {"C"}
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -43,6 +44,7 @@ const Keyboard = ({ children }) => {
                   {"("}
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -55,6 +57,7 @@ const Keyboard = ({ children }) => {
                   {")"}
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -67,6 +70,7 @@ const Keyboard = ({ children }) => {
                   {"mod"}
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -79,6 +83,7 @@ const Keyboard = ({ children }) => {
                   {"Π"}
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
         </TableRow>
@@ -93,6 +98,7 @@ const Keyboard = ({ children }) => {
                   7
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -105,6 +111,7 @@ const Keyboard = ({ children }) => {
                   8
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -117,6 +124,7 @@ const Keyboard = ({ children }) => {
                   9
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -129,6 +137,7 @@ const Keyboard = ({ children }) => {
                   {"÷"}
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -141,6 +150,7 @@ const Keyboard = ({ children }) => {
                   {"√"}
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
         </TableRow>
@@ -162,6 +172,7 @@ const Keyboard = ({ children }) => {
                   4
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -174,6 +185,7 @@ const Keyboard = ({ children }) => {
                   5
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -186,6 +198,7 @@ const Keyboard = ({ children }) => {
                   6
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -198,6 +211,7 @@ const Keyboard = ({ children }) => {
                   {"×"}
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -210,6 +224,7 @@ const Keyboard = ({ children }) => {
                   {"㎡"}
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
         </TableRow>
@@ -231,6 +246,7 @@ const Keyboard = ({ children }) => {
                   1
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -243,6 +259,7 @@ const Keyboard = ({ children }) => {
                   2
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -255,6 +272,7 @@ const Keyboard = ({ children }) => {
                   3
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -267,6 +285,7 @@ const Keyboard = ({ children }) => {
                   -
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell
@@ -282,6 +301,7 @@ const Keyboard = ({ children }) => {
                   =
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
         </TableRow>
@@ -303,6 +323,7 @@ const Keyboard = ({ children }) => {
                   0
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -312,9 +333,10 @@ const Keyboard = ({ children }) => {
               backgroundColor={"#404040"}
               value={
                 <Typography variant="h5" fontWeight={"bold"}>
-                  ,
+                  .
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -327,6 +349,7 @@ const Keyboard = ({ children }) => {
                   %
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
           <TableCell sx={{ padding: 0, width: "auto", borderBottom: 0 }}>
@@ -339,6 +362,7 @@ const Keyboard = ({ children }) => {
                   +
                 </Typography>
               }
+              changeDisplay={changeDisplay}
             />
           </TableCell>
         </TableRow>

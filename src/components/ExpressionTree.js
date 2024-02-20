@@ -22,8 +22,8 @@ const buildExpressionTree = (postfixExpression) => {
     } else {
       stack.push(new TreeNode(token));
     }
+    console.log("Tree", stack);
   }
-
   return stack.pop();
 };
 
@@ -48,6 +48,12 @@ const evaluateExpressionTree = (root) => {
       return leftValue / rightValue;
     case "^":
       return Math.pow(leftValue, rightValue);
+    case "#":
+      return Math.sqrt(rightValue);
+    case "@":
+      return  leftValue % rightValue;
+    case "%":
+      return leftValue/rightValue;
     default:
       return 0;
   }
@@ -55,7 +61,7 @@ const evaluateExpressionTree = (root) => {
 
 const isOperator = (token) => {
   // Check if the token is one of the supported operators
-  return ["+", "-", "*", "/", "^", "sqr"].includes(token);
+  return ["+", "-", "*", "/", "^", "#", "@", "%"].includes(token);
 };
 
 const isOperand = (token) => {
@@ -71,10 +77,13 @@ const getPrecedence = (operator) => {
       return 1;
     case "*":
     case "/":
+    case "@":
       return 2;
     case "^":
-    case "sqr":
+    case "#":
       return 3;
+    case "%":
+      return 4;
     default:
       return 0; //For parentheses or unknown operators
   }
@@ -117,14 +126,17 @@ const infixToPostfix = (infixExpression) => {
   return output;
 };
 
-const infixExpression = "(2*3)/(3+3^2)";
-const infixExpressionB = "6/12";
+//const infixExpression = "(2x3)/(3+3^2)";
+// const infixExpression = "07-5*4";
 
-const infixTokens = infixExpression.split(/([()+\-*/^])/).filter(Boolean);
-const postfixExpression = infixToPostfix(infixTokens);
-const expressionTree = buildExpressionTree(postfixExpression);
-const result = evaluateExpressionTree(expressionTree);
+// const infixTokens = infixExpression.split(/([()+\-*/^%#@])/).filter(Boolean);
+// console.log(infixTokens);
+// const postfixExpression = infixToPostfix(infixTokens);
+// const expressionTree = buildExpressionTree(postfixExpression);
+// const result = evaluateExpressionTree(expressionTree);
 
-console.log(`Infix Expression: ${infixExpression}`);
-console.log(`Postfix Expression: ${postfixExpression.join(" ")}`);
-console.log(`Result: ${result}`);
+// console.log(`Infix Expression: ${infixExpression}`);
+// console.log(`Postfix Expression: ${postfixExpression.join(" ")}`);
+// console.log(`Result: ${result}`);
+
+export {infixToPostfix, buildExpressionTree, evaluateExpressionTree};
