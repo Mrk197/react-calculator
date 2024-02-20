@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, IconButton } from "@mui/material";
-import RestartAltIcon from '@mui/icons-material/RestartAlt';
+import UndoIcon from '@mui/icons-material/Undo';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 
-const OptionBar = () => {
+const OptionBar = ({changeHistory, undo}) => {
     return(<Box
       sx={{
         display: "flex",
@@ -18,9 +18,9 @@ const OptionBar = () => {
       }}
     >
         <IconButton aria-label="delete">
-            <RestartAltIcon fontSize="small" sx={{backgroundColor:"#8c8c8c", borderRadius:5}}/>
+            <UndoIcon fontSize="small" sx={{backgroundColor:"#8c8c8c", borderRadius:5}} onClick={()=> undo()}/>
         </IconButton>
-        <IconButton aria-label="delete">
+        <IconButton aria-label="delete" onClick={()=> changeHistory([])}>
             <DeleteOutlineOutlinedIcon fontSize="small" sx={{backgroundColor:"#8c8c8c", borderRadius:5}}/>
         </IconButton>
     </Box>)
